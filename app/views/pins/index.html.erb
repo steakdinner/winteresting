@@ -21,8 +21,7 @@
         <td><%= link_to 'Show', pin_path(pin) %></td>
         <% if pin.user == current_user %>
           <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-        <% end %>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
@@ -32,4 +31,4 @@
 <br>
 <% if user_signed_in? %>
   <%= link_to 'New Pin', new_pin_path %>
-<% end%>
+<% end %>
